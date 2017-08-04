@@ -1,4 +1,4 @@
-# vue-sel
+# vue-sell
 
 > vue高仿饿了吗
 
