@@ -1,4 +1,4 @@
-# vue-shop
+# vue-sell
 
 > vue高仿饿了吗
 
