@@ -123,13 +123,15 @@
 				saveToLocal(this.seller.id,'favorite',this.favorite)
 	    	},
 	    	_initScroll() {
-	    		if (!this.scroll) {
-	    			this.scroll = new BScroll(this.$refs.seller,{
-	    				click: true
-	    			})
-	    		}else{
-	    			this.scroll.refresh()
-	    		}
+	    		this.$nextTick(() => {
+		    		if (!this.scroll) {
+		    			this.scroll = new BScroll(this.$refs.seller,{
+		    				click: true
+		    			})
+		    		}else{
+		    			this.scroll.refresh()
+		    		}
+	    		})
 	    	},
 	    	_initPics() {
 	    		if (this.seller.pics) {

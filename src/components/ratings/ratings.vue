@@ -28,7 +28,7 @@
 			</div>
 			<!-- 分割线 -->
 			<split></split>
-			<ratingselect :selectType="selectType" :onlyContent="onlyContent" :ratings="ratings"></ratingselect>
+			<ratingselect :selectType="selectType" :onlyContent="onlyContent" :ratings="ratings" @select="select" @toggle="toggle"></ratingselect>
 			<div class="rating-wrapper">
 				<ul>
 					<li v-show="needShow(rating.rateType,rating.text)" v-for="rating in ratings" class="rating-item border-1px">
@@ -98,7 +98,7 @@
 					})
 				}
 			})
-			// 监听来自ratingselect.vue的改变selectType值的 “select” 函数
+			/*// 监听来自ratingselect.vue的改变selectType值的 “select” 函数
 			bus.$on('select',(type) => {
 				this.selectType = type
 				this.$nextTick(() => {
@@ -111,7 +111,7 @@
 				this.$nextTick(() => {
 					this.scroll.refresh()
 				})
-			})
+			})*/
 		},
 		methods: {
 			needShow(type,text) {
@@ -123,6 +123,20 @@
 				}else{
 					return type === this.selectType
 				}
+			},
+			// 监听来自ratingselect.vue的改变selectType值的 “select” 函数
+			select(type) {
+				this.selectType = type
+				this.$nextTick(() => {
+					this.scroll.refresh()
+				})
+			},
+			// 监听来自ratingselect.vue的改变onlyContent值的 “toggle” 函数
+			toggle() {
+				this.onlyContent = !this.onlyContent
+				this.$nextTick(() => {
+					this.scroll.refresh()
+				})
 			}
 		},
 		filters: {

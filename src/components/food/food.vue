@@ -39,7 +39,7 @@
 				<split></split>
 				<div class="rating">
 					<h1 class="title">商品评价</h1>
-					<ratingselect :selectType="selectType" :onlyContent="onlyContent" :desc="desc" :ratings="food.ratings"></ratingselect>
+					<ratingselect :selectType="selectType" :onlyContent="onlyContent" :desc="desc" :ratings="food.ratings" @select="select" @toggle="toggle"></ratingselect>
 					<!-- 商品评价内容 -->
 					<div class="rating-wrapper">
 						<ul v-show="food.ratings && food.ratings.length">
@@ -96,7 +96,7 @@
 			}
 		},
 		created() {
-			// 监听来自ratingselect.vue的改变selectType值的 “select” 函数
+			/*// 监听来自ratingselect.vue的改变selectType值的 “select” 函数
 			bus.$on('select',(type) => {
 				this.selectType = type
 				this.$nextTick(() => {
@@ -109,7 +109,7 @@
 				this.$nextTick(() => {
 					this.scroll.refresh()
 				})
-			})
+			})*/
 		},
 		methods: {
 			// show方法被父组件goods调用
@@ -148,6 +148,20 @@
 				}else{
 					return type === this.selectType
 				}
+			},
+			// 监听来自ratingselect.vue的改变selectType值的 “select” 函数
+			select(type) {
+				this.selectType = type
+				this.$nextTick(() => {
+					this.scroll.refresh()
+				})
+			},
+			// 监听来自ratingselect.vue的改变onlyContent值的 “toggle” 函数
+			toggle() {
+				this.onlyContent = !this.onlyContent
+				this.$nextTick(() => {
+					this.scroll.refresh()
+				})
 			}
 		},
 		filters: {

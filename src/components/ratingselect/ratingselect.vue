@@ -79,7 +79,7 @@
 					return
 				}
 				// 发布改变selectType值的 “select” 函数
-				bus.$emit('select',type)
+				this.$emit('select',type)
 			},
 			toggleContent(event) {
 				// 消除PC端页面自带的点击事件
@@ -87,7 +87,7 @@
 					return
 				}
 				// 发布改变onlyContent值的 “toggle” 函数
-				bus.$emit('toggle')
+				this.$emit('toggle')
 			}
 		}
 	}
