@@ -31,7 +31,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
     三、data.json文件<br>
           此文件是模拟后台数据的json文件<br>
           <br>
-    四、src文件夹<br>
+    四、src文件夹<br>
           此文件夹是本次demo主要代码所在<br>
           1.common文件夹<br>
               此文件夹是demo公共代码区<br>
@@ -47,7 +47,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
                     ·icon.styl   自制图标样式<br>
                     ·mlxin.styl  一像素样式<br>
                     ·index.styl  把前三者引入此文件，以方便样式在main.js中引用<br>
-          2.components文件夹<br>
+          2.components文件夹<br>
               此文件夹是demo组件代码区<br>
               （1）cartcontrol    购物小球组件<br>
               （2）food           商品详情页组件<br>
