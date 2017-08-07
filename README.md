@@ -21,7 +21,7 @@ npm run build --report
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
-文件说明：<br>
+文件说明：<br><br>
     一、resource文件夹<br>
           此文件夹是本次demo的设计稿等<br>
           <br>
