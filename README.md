@@ -43,15 +43,15 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 #### js文件夹
 > ·bus.js      新的Vue实例
-  ·date.js     把时间轴转化为yyyy:MM:dd hh:mm:ss格式
-  ·store.js    本地存储读取数据
-  ·util.js     解析url参数
+> ·date.js     把时间轴转化为yyyy:MM:dd hh:mm:ss格式
+> ·store.js    本地存储读取数据
+> ·util.js     解析url参数
 
 #### stylus文件夹
 > ·base.styl   公共样式
-  ·icon.styl   自制图标样式
-  ·mlxin.styl  一像素样式
-  ·index.styl  把前三者引入此文件，以方便样式在main.js中引用
+> ·icon.styl   自制图标样式
+> ·mlxin.styl  一像素样式
+> ·index.styl  把前三者引入此文件，以方便样式在main.js中引用
 
 ### components文件夹
 > 此文件夹是demo组件代码区
